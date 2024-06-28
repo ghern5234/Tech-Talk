@@ -1,0 +1,42 @@
+<div class="hero bg-base-200 mt-8 ">
+  <div class="hero-content flex-col lg:flex-row">
+    <img
+      src="/images/Tech-Talk.png"
+      class="max-w-sm rounded-lg shadow-2xl mr-9" />
+    <div>
+      <h1 class="text-5xl font-bold">Welcome to Tech Talk!</h1>
+      <p class="mt-6">
+       A judgment free zone for web developers to share, learn and discuss the latest and greatest in tech!</p>
+        <p>Want to get connected to some of the brightest minds in the world web development?</p>
+       <p>Sign up now to view posts or make a post of your own!
+      </p>
+    </div>
+  </div>
+</div>
+
+<div
+  class="carousel rounded-box m-8 border-4 bg-green-600 flex flex-wrap justify-center gap-8 p-8 mb-8 overflow-visible"
+>
+  <!-- Added mb-8 for margin-bottom -->
+  {{#each (limit blogs 3)}}
+    <div
+      class="carousel-item flex items-center justify-center transition-transform duration-500 transform hover:-translate-y-1 mb-4"
+    >
+      <!-- Added mb-4 for margin-bottom -->
+      <div class="card w-full max-w-sm shadow-2xl bg-green-500 border-4 p-4">
+        <!-- Removed fixed height -->
+        <div class="card-body">
+          <h2 class="card-title">{{title}}</h2>
+          <p><strong>Company:</strong> {{company}}</p>
+          <p><strong>Technologies:</strong> {{technologies}}</p>
+          {{!-- <p><strong>Description:</strong> {{description}}</p> --}}
+          <p><strong>Budget:</strong> {{budget}}</p>
+          <p><strong>Description:</strong> Log in to see more! </p>
+          {{!-- <p><strong>Contact Email:</strong> {{contact_email}}</p> --}}
+          <p><strong>Contact Email:</strong> Log in to contact employers! </p>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
