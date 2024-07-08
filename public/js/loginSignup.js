@@ -23,7 +23,7 @@ const loginFormHandler = async (event) => {
     // If the request fails, alert the user with the response text
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace('/profile');
+      document.location.replace('/blogForm');
     } else {
       alert(response.statusText);
     }
